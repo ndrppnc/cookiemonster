@@ -1,8 +1,8 @@
 {
 "manifest_version": 2,
 
-"name": "Adwiser",
-"description": "Monitor how targetting uses private information",
+"name": "Cookie Monster",
+"description": "Crowdsource and analyze cookie and URL information for each web visit.",
 "version": "0.1",
 
 "permissions": [
