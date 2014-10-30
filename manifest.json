@@ -1,0 +1,34 @@
+{
+"manifest_version": 2,
+
+"name": "Adwiser",
+"description": "Monitor how targetting uses private information",
+"version": "0.1",
+
+"permissions": [
+  "storage",
+  "tabs",
+  "webNavigation",
+  "*://*/"
+],
+
+"browser_action": {
+  "default_icon": "resources/icon.png",
+  "default_popup": "src/popup/popup.html"
+},
+
+"background": {
+  "scripts": ["src/background/eventbackground.js"],
+  "persistent": false
+},
+
+"content_scripts": [
+  {
+    "matches": ["*://*/*"],
+    "js": [ "src/helpers/jquery.js",
+        "src/helpers/insertionQuery/insQ.js",
+        "src/helpers/jQuery-URL-Parser/purl.js",
+        "src/scraper/cookies.js"],
+    "css": ["src/bootstrap/css/bootstrap.min.css"]
+  }]
+}
